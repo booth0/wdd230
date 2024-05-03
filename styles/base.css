@@ -1,3 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Jersey+15&family=Labrada&family=Oswald:wght@300&family=Zen+Maru+Gothic&display=swap');
+
+/* html Selectors */
+
+
+a {
+        text-decoration: none;
+}
+body {
+        margin: 0;
+}
+footer {
+        background-color: blanchedalmond;
+}
 h1 {
-        color:blue;
+        display: inline;
+        font-family: Oswald, cursive;
+}
+h2 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background-color: blanchedalmond;
+        text-align: center;
+}
+header {
+        text-align: center;
+        padding: 2%;
+        background-color: blanchedalmond;
+}
+li {
+        /* display: inline; */
+        list-style-type: none;
+}
+
+main {
+        margin: 2.5%;
+        
+}
+
+span {
+        background-color: brown;
+}
+ul {
+        display: flex;
+        flex-direction: column;
+        
+}
+
+
+/* class selectors */
+section.card {
+        border-style: ridge;
+        border-radius: 5px;
+        margin-top: 20px;
+        
+}
+
+
+/*  id selectors */
+
+ul#menu {
+        text-align: center;
+        padding: 1%;
+        margin: 0%;
+        background-color: blueviolet;
+        font-family: Oswald, cursive;
+        font-size: x-large;
+}
+#title {
+        /* text-align: center; */
 }

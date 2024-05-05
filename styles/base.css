@@ -8,9 +8,17 @@ a {
 }
 body {
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
 }
 footer {
-        background-color: blanchedalmond;
+        background-color: #772F1A;
+        margin-top: auto;
+        text-align: center;
+}
+footer p {
+        color: #EEC170;
 }
 h1 {
         display: inline;
@@ -19,13 +27,13 @@ h1 {
 h2 {
         margin-bottom: 0px;
         margin-top: 0px;
-        background-color: blanchedalmond;
+        background-color: #F2A65A;
         text-align: center;
 }
 header {
         text-align: center;
         padding: 2%;
-        background-color: blanchedalmond;
+        background-color: #F2A65A;
 }
 li {
         /* display: inline; */
@@ -34,12 +42,10 @@ li {
 
 main {
         margin: 2.5%;
-        
+        height: auto;
+        flex: 1;
 }
 
-span {
-        background-color: brown;
-}
 ul {
         display: flex;
         flex-direction: column;
@@ -54,18 +60,22 @@ section.card {
         margin-top: 20px;
         
 }
-
+.head {
+        /* padding-left: 50px; */
+        padding-right: 50px;
+}
 
 /*  id selectors */
 
-ul#menu {
+#menu {
         text-align: center;
         padding: 1%;
         margin: 0%;
-        background-color: blueviolet;
-        font-family: Oswald, cursive;
-        font-size: x-large;
+        background-color: #772F1A;
+        
 }
-#title {
-        /* text-align: center; */
+#menu a {
+        font-family: Oswald, cursive;
+        color: #EEC170;
+        font-size: x-large;
 }

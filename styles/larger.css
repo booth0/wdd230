@@ -5,15 +5,22 @@
 /* Use Flex: Allign one direction (x or y) 
    Use Grid: Allign in more than one direction */
 @media screen and (min-width: 32em) {
-    ul#menu {
+    .menu {
         flex-direction: row;
         justify-content: space-around;
         height: 4%;
     }
+	.menu a {
+		display: block;
+		flex: 1 1 100%;
+	}
     #box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    #hamMenu {
+		display: none; /* hide hamburger button */
+	}
 
     .card:first-child {
         grid-column: 1/3;

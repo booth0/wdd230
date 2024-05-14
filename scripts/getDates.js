@@ -18,3 +18,12 @@ var lastModified = document.lastModified;
             
 // Update the content of the paragraph with the last modified date and time
 lastModifiedParagraph.textContent += lastModified;
+
+
+const hamButton = document.querySelector('#hamMenu');
+const navigation = document.querySelector('.menu');
+
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});

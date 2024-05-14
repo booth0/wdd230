@@ -53,6 +53,7 @@ ul {
 }
 
 
+
 /* class selectors */
 section.card {
         border-style: ridge;
@@ -66,17 +67,52 @@ section.card {
         padding-right: 50px;
 }
 
-/*  id selectors */
-
-#menu {
+.menu {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        padding: 1%;
         margin: 0%;
         background-color: #772F1A;
+        font-family: Oswald, cursive;
+        font-size: x-large;
+        padding-left: 0px;
+        
         
 }
-#menu a {
-        font-family: Oswald, cursive;
+.menu a {
         color: #EEC170;
-        font-size: x-large;
 }
+
+.menu li {
+	display: none;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+       
+        
+}
+.open li {
+	display: block;
+}
+
+
+/*  id selectors */
+#hamMenu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	right: 5%;
+	top: 2.8%;
+}
+
+#hamMenu::before {
+	content: "☰";
+}
+
+#hamMenu.open::before {
+	content: "X";
+}
+
+

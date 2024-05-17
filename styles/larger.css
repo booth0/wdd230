@@ -9,11 +9,16 @@
         flex-direction: row;
         justify-content: space-around;
         height: 4%;
+        padding: 2%;
+    }
+    .menu li {
+        display: block;
     }
 	.menu a {
 		display: block;
 		flex: 1 1 100%;
 	}
+    
     #box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

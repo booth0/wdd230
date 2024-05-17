@@ -11,14 +11,15 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        /* background-color: #121212;  */
+        /* #181818 #404040*/
 }
+
 footer {
         background-color: #772F1A;
+        color: #EEC170;
         margin-top: auto;
         text-align: center;
-}
-footer p {
-        color: #EEC170;
 }
 h1 {
         display: inline;
@@ -46,10 +47,19 @@ main {
         flex: 1;
 }
 
+main ul {
+        margin: 0%;
+        padding-block-start: 1em;
+        padding-block-end: 1em;
+}
+
 ul {
         display: flex;
         flex-direction: column;
         
+}
+nav a {
+        color: #EEC170;
 }
 
 
@@ -62,6 +72,8 @@ section.card {
         margin-top: 20px;
         
 }
+
+
 .head {
         /* padding-left: 50px; */
         padding-right: 50px;
@@ -71,16 +83,11 @@ section.card {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 0%;
         background-color: #772F1A;
+        margin: 0%;
         font-family: Oswald, cursive;
         font-size: x-large;
-        padding-left: 0px;
-        
-        
-}
-.menu a {
-        color: #EEC170;
+        padding-left: 0px;  
 }
 
 .menu li {
@@ -88,13 +95,24 @@ section.card {
 	padding: 0;
 	text-align: center;
 	text-decoration: none;
-       
-        
 }
 .open li {
 	display: block;
 }
-
+.dark {
+        background-color: #181818;
+        color: white;
+}
+.dark2 {
+        background-color: #212121;
+        color: white;
+}
+.dark3 {
+        background-color: #404040;
+}
+.whiteText {
+        color: white;
+}
 
 /*  id selectors */
 #hamMenu {
@@ -116,3 +134,16 @@ section.card {
 }
 
 
+#darkMode {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	right: 3.8%;
+	top: 6.5%;
+}
+
+#darkMode::before {
+	content: "🕶️";
+}

@@ -27,3 +27,32 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+const darkMode = document.querySelector('#darkMode');
+const body = document.querySelector('body');
+const header = document.querySelector('header');
+const menus = document.querySelectorAll('.menu');
+const links = document.querySelectorAll('body a');
+const footer = document.querySelector('footer');
+const h2s = document.querySelectorAll('.card h2');
+
+darkMode.addEventListener( 'click', () => {
+	body.classList.toggle('dark');
+	
+	menus.forEach(menu => {
+		menu.classList.toggle('dark2');
+	});	
+	links.forEach(link => {
+		link.classList.toggle('whiteText');
+	});	
+	hamButton.classList.toggle('whiteText');
+	footer.classList.toggle('dark2');
+	header.classList.toggle('dark3');
+	h2s.forEach(h2 => {
+		h2.classList.toggle('dark3');
+	});
+	// boxes.forEach(box => {
+	// 	box.classList.toggle('dark3');
+	// });
+
+});

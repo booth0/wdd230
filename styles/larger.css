@@ -5,6 +5,10 @@
 /* Use Flex: Allign one direction (x or y) 
    Use Grid: Allign in more than one direction */
 @media screen and (min-width: 32em) {
+    iframe {display: inline;
+        max-width: 300px;
+        max-height: 200px;
+    }
     .menu {
         flex-direction: row;
         justify-content: space-around;

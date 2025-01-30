@@ -21,6 +21,11 @@ footer {
         margin-top: auto;
         text-align: center;
 }
+
+#year::after{
+        content: '🌵';
+}
+
 h1 {
         display: inline;
         font-family: Oswald, cursive;

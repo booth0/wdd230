@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+#color1 {
+    color: #17183B;
+    background-color: #17183B;
+}
+#color2 {
+    color: #A11692;
+    background-color: #A11692;
+}
+#color3 {
+    color: #FF4F79;
+    background-color: #FF4F79;
+}
+#font {
+    font-family: Platypi, sans-serif;
+}
+section p {
+    display: inline;
+}

@@ -1,0 +1,25 @@
+@media screen and (min-width: 32em) {
+    iframe {display: inline;
+        max-width: 300px;
+        max-height: 200px;
+    }
+    .navbar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+    }
+    #hamMenu {
+		display: none; /* hide hamburger button */
+	}
+}

@@ -1,10 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+#font {
+    font-family: Platypi, sans-serif;
+}
 header {
     background-color: #17183B;
     color: white;
     display: flex;
     flex-direction: row;
-    
+    justify-content: flex-end;
+    align-items: center;
+    height: 140px; /* Adjust this to your desired height */
+    padding: 0 20px; /* Optional: add some horizontal padding */
 }
+
+
 body {
     margin: 0;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section.card {
+    border-style: ridge;
+    border-right-style: groove;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #E9E6D3;
+}
+
+.main_logo {
+    margin-right: auto;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    /* border: 2px solid black; */
+}
+
+.navbar a:hover {
+    background-color: #A11692;
+    border-radius: 5px;
+}
+.navbar.open {
+    display: block;
+}
+
+#hamMenu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: white;
+ 	position: absolute;
+	right: 5%;
+	top: 2.8%;
+}
+
+#hamMenu::before {
+	content: "☰";
+}
+
+#hamMenu.open::before {
+	content: "X";
 }

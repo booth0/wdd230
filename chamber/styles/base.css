@@ -18,6 +18,13 @@ body {
     margin: 0;
 }
 
+footer {
+    background-color: #A11692;
+    color: #E9E6D3;
+    margin-top: auto;
+    text-align: center;
+}
+
 main {
     margin-left: 20px;
     margin-right: 20px;
@@ -34,11 +41,23 @@ section.card {
 .main_logo {
     margin-right: auto;
 }
-
+@media screen and (max-width: 32em) {
 .navbar {
     display: none;
+    position: absolute;
+    top: 120px; /* Adjust this to move it below the header */
+    left: 0;
+    width: 100%;
+    background-color: #17183B; /* Same as header to make it seamless */
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
 }
 
+.navbar ul {
+    list-style-type: none;
+}
 .navbar li{
     float: left;
 }
@@ -46,7 +65,7 @@ section.card {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: .5rem;
     /* border: 2px solid black; */
 }
 
@@ -55,7 +74,8 @@ section.card {
     border-radius: 5px;
 }
 .navbar.open {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 #hamMenu {

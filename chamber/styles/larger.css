@@ -24,4 +24,29 @@
     #hamMenu {
 		display: none; /* hide hamburger button */
 	}
+
+    /* Main Layout for Larger Screens */
+    #content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px;
+    }
+
+    /* Info Group: Display Side by Side */
+    .info-group {
+        display: flex;
+        flex-direction: row; /* Side by side layout */
+        gap: 15px;
+    }
+
+    .info-group .card {
+        flex: 1; /* Allow even distribution */
+    }
+
+    /* Spotlight Group: Display in a Vertical Stack */
+    .spotlight-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }

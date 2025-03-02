@@ -92,7 +92,10 @@ main {
     margin-bottom: 0;
     border-bottom: 1px solid var(--primary-color); /* Width, Style, and Color */
 }
-
+.hero img {
+    width: 100%;
+    height: auto;
+}
 .main_logo {
     margin-right: auto;
 }

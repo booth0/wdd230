@@ -1,0 +1,60 @@
+{
+    "members": [
+      {
+        "name": "The Kolache Cafe",
+        "address": "123 Pastry Lane, Mesa, AZ 85201",
+        "phone": "(480) 555-0101",
+        "website": "https://thekolachecafe.com",
+        "image": "./images/kolache_logo.png",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Classic Air Aviation",
+        "address": "4805 E Falcon Dr, Mesa, AZ 85215",
+        "phone": "(480) 396-4407",
+        "website": "https://www.classicairaviation.com",
+        "image": "./images/classic-air-aviation_logo.png",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Banner Desert Medical Center",
+        "address": "1400 South Dobson Road, Mesa, AZ 85202",
+        "phone": "(480) 555-0303",
+        "website": "https://www.bannerhealth.com/locations/mesa/banner-desert-medical-center",
+        "image": "./images/bannerhealth_logo.svg",
+        "membership_level": "Platinum"
+      },
+      {
+        "name": "Premier Kitchen and Bath",
+        "address": "4856 E Baseline Rd #108, Mesa, AZ 85206",
+        "phone": "(480) 725-7092",
+        "website": "https://www.premierkitchenandbath.com",
+        "image": "./images/premiere_logo.webp",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Empire CAT",
+        "address": "1725 S Country Club Dr, Mesa, AZ 85210",
+        "phone": "(480) 633-4000",
+        "website": "https://www.empire-cat.com/locations/mesa-headquarters",
+        "image": "./images/empirecat_logo.png",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Able Aerospace Services",
+        "address": "7706 E Velocity Way, Mesa, AZ 85212",
+        "phone": "(480) 891-2200",
+        "website": "https://www.ableengineering.com",
+        "image": "./images/ableaerospace_logo.png",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Commercial Metals Company",
+        "address": "11444 E. Germann Rd., Mesa, AZ 85212",
+        "phone": "(480) 396-7100",
+        "website": "https://www.cmc.com",
+        "image": "./images/cmc_logo.svg",
+        "membership_level": "Bronze"
+      }
+    ]
+  }

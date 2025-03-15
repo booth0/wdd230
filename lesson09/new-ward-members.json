@@ -1,0 +1,33 @@
+{
+    "familyName" : "Johnson",
+    "dateMovedIn" : "09/06/2023",
+    "numberOfPeople" : 5,
+    "bishopricVisited" : true,
+    "familyMembers" : [
+        {
+            "name" : "Jacob",
+            "gender" : "M",
+            "birthdate" : "03/03/1972"
+        },
+        {
+            "name" : "Jessie",
+            "gender" : "F",
+            "birthdate" : "06/07/1974"
+        },
+        {
+            "name" : "Jane",
+            "gender" : "F",
+            "birthdate" : "01/12/1995"
+        },
+        {
+            "name" : "Jackson",
+            "gender" : "M",
+            "birthdate" : "04/05/1997"
+        },
+        {
+            "name" : "Jeremy",
+            "gender" : "M",
+            "birthdate" : "02/16/2001"
+        }
+    ]
+}

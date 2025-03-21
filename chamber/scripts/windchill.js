@@ -1,7 +1,8 @@
 
 // select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
+let weatherIcon = document.createElement('img');
+const weatherImg = document.querySelector('#weatherImg');
 const captionDesc = document.querySelector('#description');
 const humidity = document.querySelector('#humidity');
 const windChill = document.querySelector('#windChill');
@@ -51,8 +52,9 @@ const displayWeather = (data) => {
     ).join(' ');
     humidity.textContent = `Humidity: ${data.main.humidity}%`;
     windChill.textContent = `Wind Chill: ${windChillCalc.toFixed(2)}`;
-    weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-    weatherIcon.setAttribute('alt', data.weather.main);
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; // Replace with your image URL
+    weatherIcon.alt = data.weather[0].main;
+    weatherImg.appendChild(weatherIcon);
 }
 const displayForecast = (data) => {
     threeDay.innerHTML = `Three Day Forecast: ${data.list[0].main.temp}&deg;F, ${data.list[1].main.temp}&deg;F, ${data.list[2].main.temp}&deg;F`;

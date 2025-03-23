@@ -58,4 +58,25 @@
     .thank-you-message, .flavor-text, .next-steps {
         font-size: 1rem;
     }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list section {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        margin: 0;
+        padding: 0.25rem;
+    }
+    #meminfo {
+        display: block;
+    }
+    .join-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
 }

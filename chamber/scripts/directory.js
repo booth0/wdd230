@@ -35,6 +35,7 @@ const displayBusinesses = (businesses) =>{
         logo.setAttribute('alt', 'Image of ${business.name}'); // Set alt text
         logo.setAttribute('loading', 'lazy'); // Set alt text
         logo.style.maxHeight = "80px";
+        logo.className = 'businesslogo';
         section.className = 'card';
         cards2.appendChild(section);
         section.appendChild(logo);
@@ -46,3 +47,23 @@ const displayBusinesses = (businesses) =>{
 }
 
 getLinkData();
+
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("article");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}

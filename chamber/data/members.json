@@ -20,7 +20,7 @@
         "name": "Banner Desert Medical Center",
         "address": "1400 South Dobson Road, Mesa, AZ 85202",
         "phone": "(480) 555-0303",
-        "website": "https://www.bannerhealth.com/locations/mesa/banner-desert-medical-center",
+        "website": "https://www.bannerhealth.com",
         "image": "./images/bannerhealth_logo.svg",
         "membership_level": "Platinum"
       },

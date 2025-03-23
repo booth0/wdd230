@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="City of Mesa Chamber of Commerce">
+    <meta property="og:title" content="City of Mesa Chamber of Commerce Join Page">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://booth0.github.io/wdd230/week04/chamber.html/">
-    <meta property="og:image" content=""/>
-    <title>City of Mesa Chamber of Commerce</title>
+    <meta property="og:image" content="">
+    <title>City of Mesa Chamber of Commerce Join Page</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -32,31 +32,68 @@
         🕶️
     </div>
     <main>
-        <form>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required autocomplete="off">
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required autocomplete="off">
-            <label for="titlepos">Title/Position:</label>
-            <input type="text" id="titlepos" name="titlepos" title="Only letters, hyphens, and spaces allowed. Minimum 7 characters." pattern="^[A-Za-z -]{7,}$" required autocomplete="off">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="off">
-            <label for="phonenum">Mobile Phone Number:</label>
-            <input type="tel" id="phonenum" name="phonenum" required autocomplete="off">
-            <!-- <label for="phonenum">Mobile Phone Number:</label>
-            <input type="tel" id="phonenum" name="phonenum" required autocomplete="off"> -->
-            <label for="businame">Business/Organization Number:</label>
-            <input type="text" id="businame" name="businame" required autocomplete="off">
-            
-            <button type="submit">Submit</button>
+        <div class="wrapper">
+            <div class="form-container">
+                <h1 id="jointitle">Registration Form</h1>
+                <form method="get" action="thankyou.html">
+                    <label>
+                        First Name:
+                        <input type="text" id="firstname" name="firstname" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Last Name:
+                        <input type="text" id="lastname" name="lastname" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Title/Position:
+                        <input type="text" id="titlepos" name="titlepos" title="Only letters, hyphens, and spaces allowed. Minimum 7 characters." pattern="^[A-Za-z -]{7,}$" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Email Address:
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Mobile Phone Number:
+                        <input type="tel" id="phonenum" name="phonenum" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Business/Organization Number:
+                        <input type="text" id="businame" name="businame" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Membership Level:
+                        <input type="text" id="memlvl" name="memlvl" list="levels" required>
+                    </label>
+                    
+                    <datalist id="levels">
+                        <option>Non-profit</option>
+                        <option>Bronze</option>
+                        <option>Silver</option>
+                        <option>Gold</option>
+                    </datalist>
+                    <label>
+                        Business/Organization Description:
+                        <textarea id="businessDescription" name="businessDescription" rows="4" cols="50" required></textarea>
+                    </label>
+                    <label>
+                        <input type="hidden" id="timestamp" name="timestamp">
+                    </label>
+                    <button type="submit">Submit</button>
 
-        </form>
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <p id="year">&copy;, Adam Booth | WDD230</p>
         <p id="lastModified">Last Modified: </p>
         <script src="scripts/chamber.js"></script>
-        <script src="scripts/windchill.js"></script>
     </footer>
 </body>
 </html>

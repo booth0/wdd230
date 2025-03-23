@@ -17,9 +17,10 @@
         overflow: hidden;
         margin: 0;
     }
-    .navbar a {
-        padding: 1rem;
-        /* border: 2px solid black; */
+
+    #mode {
+        top: 1rem;
+        right: 1rem;
     }
     #hamMenu {
 		display: none; /* hide hamburger button */
@@ -48,5 +49,13 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+    .thank-you-container {
+        padding: 20px;
+    }
+
+
+    .thank-you-message, .flavor-text, .next-steps {
+        font-size: 1rem;
     }
 }

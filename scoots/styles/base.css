@@ -4,13 +4,13 @@
     --secondary-color: #E92C28;
     --background-color: #E4BA95;
     --white: white;
-    
 }
+
 /* Reset and base styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -21,77 +21,117 @@ html, body {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
 }
+
+/* Footer */
 footer {
     background-color: #401D45;
     color: white;
+    padding: 20px;
     margin-top: auto;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer h3 {
+    border-bottom: 2px solid white;
+}
+
+.footer_locations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-footer {
+    background-color: #333;
+    padding: 1rem;
     text-align: center;
 }
 
-/* Header styling */
+.social-icons a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a,
+.plaintext a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.plaintext a:hover,
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header */
 .main-header {
-  background-color: #EF9187;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
+    background-color: #EF9187;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
 }
 
-/* Logo and title layout */
+/* Logo + title */
 .logo-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
-/* Updated logo styling */
 .logo {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Title styling */
+/* Title */
 .logo-title h1 {
-  font-size: 2rem;
-  color: #333;
-  flex: 1;
+    font-size: 2rem;
+    color: #333;
 }
 
-/* Hamburger button */
+/* Hamburger toggle */
 .menu-toggle {
-  display: none;
-  position: absolute;
-  right: 30px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #333;
-  cursor: pointer;
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
 }
 
-/* Navbar styling */
+/* Navbar - mobile default */
+.navbar {
+    display: none;
+    margin-top: 1rem;
+}
+
+.navbar.active {
+    display: block;
+}
+
 .navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background-color: var(--primary-color);
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: var(--secondary-color);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adam Booth">
+    <meta name="description" content="The Scoots Motor Scooter Rental Site was developed by Adam Booth to provide users access to motor vehicle rental services through the Scoots business.">
+    <meta property="og:title" content="Scoots Motor Scooter Rental Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://booth0.github.io/wdd230/scoots/index.html">
+    <meta property="og:image" content="https://booth0.github.io/wdd230/scoots/images/scoots_logo2">
+    <title>Scoots Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-title">
+            <img src="images/scoots_logo2.webp" alt="Scoots Logo" class="logo" />
+            <h1>Scoots Motor Scooter Rental</h1>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>test</h2>
+    </main>
+    <footer>
+        <p>hello</p>
+        <script>
+            const toggleBtn = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+        
+            toggleBtn.addEventListener('click', () => {
+              navbar.classList.toggle('active');
+            });
+          </script>
+    </footer>
+</body>
+</html>

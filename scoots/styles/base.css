@@ -1,0 +1,97 @@
+/* Logo colors: Red-E92C28 Pink-EF9187 Purple-401D45 DarkerPurple-401E43 Tan-E4BA95 GreyDark-6E6E6E GreyLight-BDBDBD */
+:root {
+    --primary-color: #401E43;
+    --secondary-color: #E92C28;
+    --background-color: #E4BA95;
+    --white: white;
+    
+}
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+footer {
+    background-color: #401D45;
+    color: white;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Header styling */
+.main-header {
+  background-color: #EF9187;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+/* Logo and title layout */
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Updated logo styling */
+.logo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Title styling */
+.logo-title h1 {
+  font-size: 2rem;
+  color: #333;
+  flex: 1;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 30px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Navbar styling */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--primary-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}

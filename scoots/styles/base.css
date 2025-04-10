@@ -148,6 +148,13 @@ footer h3 {
     align-items: center;
     gap: 20px;
 }
+.agreement_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .form-container {
     background-color: #fff;
     padding: 20px;
@@ -158,6 +165,8 @@ footer h3 {
     box-sizing: border-box;
     width: 100%;
     max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .form-container form {
     display: flex;

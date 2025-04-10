@@ -18,7 +18,7 @@
 <body>
     <header class="main-header">
         <div class="logo-title">
-            <img src="images/scoots_logo2.webp" alt="Scoots Logo" class="logo" />
+            <img src="images/scoots_logo2.webp" alt="Scoots Logo" class="logo">
             <h1>Scoots Motor Scooter Rental</h1>
             <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         </div>
@@ -32,7 +32,101 @@
         </nav>
     </header>
     <main>
-        <h2>test</h2>
+        <div class="form-container">
+            <h2>Rental Services and Agreements</h2>
+            <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid drivers license is required in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+        </div>
+
+        <div class="wrapper">
+            <div class="form-container">
+                <h1 id="jointitle">Reservation Form</h1>
+                <form method="get" action="confirmation.html">
+                    <label>
+                        First Name:
+                        <input type="text" id="firstname" name="firstname" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Last Name:
+                        <input type="text" id="lastname" name="lastname" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Email Address:
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Mobile Phone Number:
+                        <input type="text" id="phonenum" name="phonenum" required autocomplete="off">
+                    </label>
+
+                    <label>
+                        Home State/Country:
+                        <input type="text" id="state_country" name="state_country" required autocomplete="off">
+                    </label>
+
+                    <label>
+                        Cruise Line (if applicable):
+                        <input type="text" id="cruise" name="cruise" autocomplete="off">
+                    </label>
+                    
+                    <label>
+                        Rental Type:
+                        <input type="text" id="rentaltype" name="rentaltype" list="types" required>
+                    </label>
+                    <datalist id="types">
+                        <option>Half Day (3 Hours)</option>
+                        <option>Full Day</option>
+                    </datalist>
+                    <label>
+
+                    <label>
+                        Vehicle Type:
+                        <input type="text" id="vehicletype" name="vehicletype" list="vehicles" required>
+                    </label>
+                    <datalist id="vehicles">
+                        <option>Honda Metro Scooter</option>
+                        <option>Honda Dio Scooter</option>
+                        <option>Honda PCX150 Scooter</option>
+                        <option>Honda Pioneer ATV</option>
+                        <option>Jeep Wrangler - 4 door with a/c</option>
+                        <option>Jeep Wrangler - 2 door</option>
+                    </datalist>
+                    <label>
+
+
+                        Start Date:
+                        <input type="date" id="startdate" name="startdate" required>
+                    </label>
+                    <label>
+                        End date:
+                        <input type="date" id="enddate" name="enddate" required>
+                    </label>
+                
+                    <label>
+                        Special Accommodtaions/Comments:
+                        <textarea id="businessDescription" name="businessDescription" rows="4" cols="50" required></textarea>
+                    </label>
+                    <label>
+                        <input type="hidden" id="timestamp" name="timestamp">
+                    </label>
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div>

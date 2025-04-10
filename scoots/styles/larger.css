@@ -35,9 +35,12 @@
         justify-content: center;
         gap: 2rem;
     }
-    div.container {
+    .container {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+    .home_cards {
+        flex-direction: row;
     }
 }

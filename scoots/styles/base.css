@@ -167,6 +167,29 @@ footer h3 {
     text-align: center;
 }
 
+.card {
+    background: var(--white);
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
+    border-style: ridge;
+    border-right-style: groove;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--primary-color); /* Width, Style, and Color */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
 label {
     font-size: 16px;
     margin-bottom: 8px;

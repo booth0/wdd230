@@ -10,6 +10,7 @@ toggleBtn.addEventListener('click', () => {
 // ✔️ All the weather data points provided including the main (which is the title, e.g., "Clouds"), the description, and the associated weather icon.
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=20.43&lon=-86.90&units=imperial&appid=1b1e8e5f5acec9a31033b42c74645b94';
+const url2 = 'https://api.openweathermap.org/data/2.5/forecast?lat=20.43&lon=-86.90&units=imperial&appid=1b1e8e5f5acec9a31033b42c74645b94';
 
 async function apiFetch() {
   try {
@@ -26,6 +27,24 @@ async function apiFetch() {
   catch (error) {
       console.error('Error fetching data:', error);
   }
+  
+}
+async function apiFetch2() {
+  try {
+    const response2 = await fetch(url2);
+
+    if (!response2.ok) {
+        throw Error(await response2.text());
+    }
+
+    const data2 = await response2.json();
+    console.log(data2); // Check if data is being fetched correctly
+    displayWeather2(data2.list[5]);
+} 
+catch (error) {
+    console.error('Error fetching data:', error);
+}
+  
 }
 
 
@@ -34,27 +53,72 @@ async function apiFetch() {
 // const weatherImg = document.querySelector('#weatherImg');
 // const captionDesc = document.querySelector('#description');
 
-const weatherCard = document.querySelector('.card:nth-of-type(2)');
+const weatherCard = document.querySelector('.home_card:nth-of-type(2)');
 
 const displayWeather = (data) => {
-const currentTemp = document.createElement("p");
-const currentHumidity = document.createElement("p");
-currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;F`;
-currentHumidity.innerHTML = `Current Humidity: ${data.main.humidity}`
-weatherCard.appendChild(currentTemp);
-weatherCard.appendChild(currentHumidity);
+  const weatherIconContainer = document.createElement("div");
+  weatherIconContainer.className = "weatherIconContainer";
+  const weatherIcon = document.createElement("img");
+  const captionDesc = document.createElement("p");
+  const currentTemp = document.createElement("p");
+  const currentHumidity = document.createElement("p");
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  weatherIcon.alt = data.weather[0].main;
+  captionDesc.textContent = data.weather[0].description.split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    ).join(' ');
+  currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;F`;
+  currentHumidity.innerHTML = `Current Humidity: ${data.main.humidity}`
+  weatherCard.appendChild(weatherIconContainer);
+  weatherIconContainer.appendChild(weatherIcon);
+  weatherIconContainer.appendChild(captionDesc);
+  weatherCard.appendChild(currentTemp);
+  weatherCard.appendChild(currentHumidity);
 
 
 
 
-  // captionDesc.textContent = data.weather[0].description.split(' ').map(word => 
-  //     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-  // ).join(' ');
-  // weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; // Replace with your image URL
-  // weatherIcon.alt = data.weather[0].main;
-  // weatherImg.appendChild(weatherIcon);
+    
+    
+
+}
+const displayWeather2 = (data) => {
+  const tomorrowTemp = document.createElement("p");
+  tomorrowTemp.innerHTML = `Tomorrow's Temperature (3pm): ${data.main.temp}&deg;F`;
+  weatherCard.appendChild(tomorrowTemp);
 
 }
 
 
 apiFetch()
+apiFetch2()
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

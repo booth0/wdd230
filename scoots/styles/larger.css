@@ -43,4 +43,7 @@
     .home_cards {
         flex-direction: row;
     }
+    .home_card {
+        width: 50%;
+    }
 }

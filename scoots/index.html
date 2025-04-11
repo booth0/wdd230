@@ -18,7 +18,7 @@
 <body>
     <header class="main-header">
         <div class="logo-title">
-            <img src="images/scoots_logo2.webp" alt="Scoots Logo" class="logo">
+            <img src="images/scoots_logo2.webp" alt="Scoots Logo" class="logo" loading="lazy">
             <h1>Scoots Motor Scooter Rental</h1>
             <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         </div>
@@ -40,15 +40,53 @@
         </div>
     </div> -->
     <main>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <picture>
+                    <source srcset="images/cozumel_landscape_small.webp" media="(max-width: 500px)">
+                    <img src="images/cozumel_landscape_large.webp" alt="Cozumel landscape" loading="lazy">
+                </picture>
+            </div>
+          
+            <div class="mySlides fade">
+                <picture>
+                    <source srcset="images/scooter_ride_small.webp" media="(max-width: 500px)">
+                    <source srcset="images/scooter_ride_medium.webp" media="(max-width: 1000px)">
+                    <img src="images/scooter_ride_large.webp" alt="Scooter Ride" loading="lazy">
+                </picture>
+            </div>
+          
+            <div class="mySlides fade">
+                <picture>
+                    <source srcset="images/rental_scooters_small.webp" media="(max-width: 500px)">
+                    <source srcset="images/rental_scooters_medium.webp" media="(max-width: 1000px)">
+                    <img src="images/rental_scooters_large.webp" alt="Scooter Ride" loading="lazy">
+                </picture>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
         <div id="reserve-button-wrapper">
             <a id="reserve-button" href="reservations.html">Place a reservation!</a>
         </div>
         <div class="home_cards">
-            <div class="card">
+            <div class="home_card">
                 <h3>General Info:</h3>
                 <p>The rental service offers a mix of vehicles for different needs. You can choose from small Honda scooters for one or two people, a group-friendly ATV, or larger Jeeps for families. Renting requires a small deposit and a valid driver's license, and fuel isn’t included. They also offer free delivery on longer rentals and accept several forms of payment, making the process simple and straightforward.</p>
             </div>
-            <div class="card">
+            <div class="home_card">
                 <h3>Weather Info:</h3>
             </div>
         </div>
@@ -94,7 +132,12 @@
                 </a>
             </div>
         </div>
-        
+        <div>
+            <h3>Attributions Page</h3>
+            <span class="plaintext">
+                <a href="attributions.html">Click here</a>
+            </span>
+        </div>
         <script src="scripts/weather.js"></script>
     </footer>
 </body>

@@ -398,3 +398,39 @@ picture img {
   .icon.twitter {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 1200 1227'><path d='M747.5 553.6 1166.2 0H1061L705.8 471.3 413.9 0H0l449.1 709.4L0 1227h105.2l377.7-497.3L794 1227h413.9L747.5 553.6zM548.4 697.1l-43.7-68.9L147.7 86h206.4l273.5 430.8 43.6 68.9 379.8 597.1H844.9L548.4 697.1z'/></svg>");
   }
+
+
+  /* Popup Banner Styles */
+.popup { /* Hidden by default */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-style: ridge;
+    border-right-style: groove;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Close Button (X) */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: red;
+  }

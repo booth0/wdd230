@@ -3,6 +3,9 @@ const navbar = document.querySelector('.navbar');
 toggleBtn.addEventListener('click', () => {
   navbar.classList.toggle('active');
 });
+const popup = document.getElementById('popupBanner');
+const closeBtn = document.getElementById('closeBtn');
+const highTemp = document.getElementById('high_temp');
 
 // ✔️ The current temperature
 // ✔️ The current humidity
@@ -47,12 +50,6 @@ catch (error) {
   
 }
 
-
-// const currentTemp = document.querySelector('#current-temp');
-// let weatherIcon = document.createElement('img');
-// const weatherImg = document.querySelector('#weatherImg');
-// const captionDesc = document.querySelector('#description');
-
 const weatherCard = document.querySelector('.home_card:nth-of-type(2)');
 
 const displayWeather = (data) => {
@@ -69,29 +66,35 @@ const displayWeather = (data) => {
     ).join(' ');
   currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;F`;
   currentHumidity.innerHTML = `Current Humidity: ${data.main.humidity}`
+  highTemp.innerHTML = `${data.main.temp_max}&deg;F`
   weatherCard.appendChild(weatherIconContainer);
   weatherIconContainer.appendChild(weatherIcon);
   weatherIconContainer.appendChild(captionDesc);
   weatherCard.appendChild(currentTemp);
   weatherCard.appendChild(currentHumidity);
-
-
-
-
-    
-    
-
 }
+
 const displayWeather2 = (data) => {
   const tomorrowTemp = document.createElement("p");
   tomorrowTemp.innerHTML = `Tomorrow's Temperature (3pm): ${data.main.temp}&deg;F`;
   weatherCard.appendChild(tomorrowTemp);
-
 }
 
 
 apiFetch()
 apiFetch2()
+
+// When the user clicks on the close button, hide the popup
+closeBtn.onclick = function() {
+  popup.style.display = 'none';
+}
+
+// You can also close the popup by clicking outside of it
+window.onclick = function(event) {
+  if (event.target === popup) {
+    popup.style.display = 'none';
+  }
+}
 
 
 let slideIndex = 1;

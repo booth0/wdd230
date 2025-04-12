@@ -366,3 +366,35 @@ picture img {
 #reserve-button:hover {
     background-color: var(--secondary-color);
 }
+.icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  /* SVG backgrounds as data URIs */
+  
+  .icon.facebook {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.41h3.128V8.797c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.296h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z'/></svg>");
+    background-color: #3b5998;
+    border-radius: 50%;
+  }
+  
+  .icon.instagram {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.43-30.43c-21-8.31-71-6.41-94.28-6.41s-73.31-1.9-94.28,6.41a54,54,0,0,0-30.43,30.43c-8.31,21-6.41,71-6.41,94.28s-1.9,73.31,6.41,94.28a54,54,0,0,0,30.43,30.43c21,8.31,71,6.41,94.28,6.41s73.31,1.9,94.28-6.41a54,54,0,0,0,30.43-30.43c8.31-21,6.41-71,6.41-94.28S357,182.66,348.71,161.71ZM224,338.67A82.67,82.67,0,1,1,306.67,256,82.79,82.79,0,0,1,224,338.67ZM370.67,162a19.33,19.33,0,1,1,19.33-19.33A19.35,19.35,0,0,1,370.67,162Z'/></svg>");
+    background-color: #E1306C;
+    border-radius: 20%;
+  }
+  
+  .icon.twitter {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 1200 1227'><path d='M747.5 553.6 1166.2 0H1061L705.8 471.3 413.9 0H0l449.1 709.4L0 1227h105.2l377.7-497.3L794 1227h413.9L747.5 553.6zM548.4 697.1l-43.7-68.9L147.7 86h206.4l273.5 430.8 43.6 68.9 379.8 597.1H844.9L548.4 697.1z'/></svg>");
+  }
